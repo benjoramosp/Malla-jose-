@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #c2185b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.malla-grid, .malla {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+/* === SEMESTRES 1–4 (Ciclo Básico) === */
+.semestre.basico {
+  min-width: 220px;
+  background-color: #ffe4ec;
+  border: 2px solid #eea5be;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #880e4f;
+}
+
+.semestre.basico h2 {
+  text-align: center;
+  color: #880e4f;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f8bbd0;
+  padding-bottom: 6px;
+}
+
+.ramo.basico {
+  background: linear-gradient(145deg, #f48fb1, #e47ca5);
+  border: 1px solid #880e4f;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #880e4f;
+  font-weight: 600;
+  box-shadow: 4px 4px 8px #c28aa2, -4px -4px 8px #ffcee1;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+/* === SEMESTRES 5–8 (Ciclo Mención) === */
+.semestre.mencion {
+  min-width: 220px;
+  background-color: #f3e4ff;
+  border: 2px solid #ca8ff4;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #4a148c;
+}
+
+.semestre.mencion h2 {
+  text-align: center;
+  color: #4a148c;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #d9b3ff;
+  padding-bottom: 6px;
+}
+
+.ramo.mencion {
+  background: linear-gradient(145deg, #bd9fd8, #a885c8);
+  border: 1px solid #4a148c;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #4a148c;
+  font-weight: 600;
+  box-shadow: 4px 4px 8px #b495d3, -4px -4px 8px #e7d5ff;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+/* === Efectos comunes === */
+.ramo:hover {
+  transform: translateY(-3px);
+}
+
+.ramo:active {
+  transform: translateY(1px);
+}
+
+/* === Estado bloqueado === */
+.ramo.bloqueado {
+  background-color: #f3f3f3 !important;
+  color: #999 !important;
+  border-style: dashed !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* === Estado aprobado === */
+.ramo.aprobado {
+  opacity: 0.5;
+  text-decoration: line-through;
+  font-style: italic;
+}
